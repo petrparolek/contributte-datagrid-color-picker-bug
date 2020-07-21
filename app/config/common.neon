@@ -1,0 +1,26 @@
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+services:
+	router: App\Router\RouterFactory::create
+
+extensions:
+	dibi: Dibi\Bridges\Nette\DibiExtension22
+
+dibi:
+	host: localhost
+	username: homestead
+	password: secret
+	database: playground-contributte-datagrid
+
+session:
+	savePath: "%tempDir%/sessions"
+
+tracy:
+	maxDepth: 5
+	maxLength: 5000
+	showLocation: true
+	editorMapping:
+		/home/vagrant/projects: D:\projects

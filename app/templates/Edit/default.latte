@@ -8,6 +8,11 @@
         $(function () {
             // Basic instantiation:
             $('.color-input').colorpicker();
+            $.nette.ext({
+                success: function() {
+                    $('.color-input').colorpicker();
+                }
+            });
         });
     </script>
 {/block}
